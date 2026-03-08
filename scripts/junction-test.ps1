@@ -25,7 +25,7 @@ Resolve-RealPath -Path "C:\Regular_Folder"
 
 # System profile path: requires admin rights
 Write-Host "== System profile path =="
-Resolve-RealPath -Path "C:\Windows\System32\config\systemprofile\.m2"
+Resolve-RealPath -Path "C:\Windows\System32\config\systemprofile\.m2-test-folder"
 
 # Junction
 Write-Host "== Junction link =="

@@ -4,5 +4,7 @@ dictionaryDefinitions: []
 dictionaries: []
 words:
   - elif
+  - mklink
+  - systemprofile
 ignoreWords: []
 import: []
