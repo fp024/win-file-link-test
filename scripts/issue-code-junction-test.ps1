@@ -12,7 +12,7 @@ Write-Host "== PowerShell process: $arch ==" -ForegroundColor Cyan
 function Resolve-RealPath {
   param([string]$Path)
 
-  if ((Get-Item $Path).Target -eq $null) {
+  if ($null -eq (Get-Item $Path).Target) {
     Write-Host "  → Target is null (WOW64 redirection)" -ForegroundColor Yellow
   }
 
