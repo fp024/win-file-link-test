@@ -12,7 +12,14 @@ Write-Host "== PowerShell process: $arch ==" -ForegroundColor Cyan
 function Resolve-RealPath {
   param([string]$Path)
 
+  if ((Get-Item $Path).Target -eq $null) {
+    Write-Host "  → Target is null (WOW64 redirection)" -ForegroundColor Yellow
+  }
+
   if ((Get-Item $Path).Target[0] -eq $null) {
+    if ((Get-Item $Path).Target.Count -eq 0) {
+      Write-Host "Target is an empty array"
+    }
     return $Path  
   }
   else {
@@ -23,6 +30,7 @@ function Resolve-RealPath {
 
 ### Tests ###
 # Regular path: no admin rights required
+# 💡 For a regular path, .Target returns an empty array.
 Write-Host "== Regular folder =="
 Resolve-RealPath -Path "C:\Regular_Folder"
 
