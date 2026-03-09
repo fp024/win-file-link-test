@@ -24,7 +24,7 @@ function Invoke-AsAdmin {
         } else {
             $exe = if (Get-Command pwsh -ErrorAction SilentlyContinue) { "pwsh" } else { "powershell" }
         }
-        Start-Process $exe -ArgumentList "-NoExit", "-File", "`"$ScriptPath`"" -Verb RunAs
+        Start-Process $exe -ArgumentList "-NoExit", "-ExecutionPolicy", "Bypass", "-File", "`"$ScriptPath`"" -Verb RunAs
         exit
     }
 }
