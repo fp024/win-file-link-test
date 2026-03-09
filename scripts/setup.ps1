@@ -10,4 +10,5 @@ else { New-Item -ItemType Junction     -Path C:\Maven-Junction -Target C:\Maven-
 
 if (Test-Path C:\Maven-Symlink)  { Write-Warning "C:\Maven-Symlink already exists. Delete it manually and re-run." }
 else { New-Item -ItemType SymbolicLink -Path C:\Maven-Symlink  -Target C:\Maven-Repo-Test-Folder }
+# When run as x86, the actual path resolves to C:\Windows\SysWOW64\config\systemprofile due to WOW64 filesystem redirection.
 mkdir "C:\Windows\System32\config\systemprofile\.m2-test-folder" -Force
