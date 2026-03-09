@@ -7,14 +7,17 @@ Write-Host "== PowerShell process: $arch ==" -ForegroundColor Cyan
 
 
 ### Returns the real path for a given path (resolves junctions and symbolic links) ###
+# Tried using .LinkType, but the approach in junction-test.ps1 seems safer. 😅
 function Resolve-RealPath {
   param([string]$Path)
 
-  $linkTarget = (Get-Item $Path).Target
-  if ($linkTarget -is [array] -and $linkTarget.Count -gt 0) {
-    return $linkTarget[0]
+  $m2PathItem = (Get-Item $Path)
+  if ($null -eq $m2PathItem.LinkType) {
+    return $Path
   }
-  return $Path
+  else {
+    return $m2PathItem.Target[0]
+  }
 }
 
 

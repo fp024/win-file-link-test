@@ -46,9 +46,9 @@ This tests the **Resolve-RealPath** function in [scripts/junction-test.ps1](scri
 function Resolve-RealPath {
   param([string]$Path)
 
-  $item = (Get-Item $Path).Target
-  if ($item -is [array] -and $item.Count -gt 0) {
-    return $item[0]
+  $linkTarget = (Get-Item $Path).Target
+  if ($linkTarget -is [array] -and $linkTarget.Count -gt 0) {
+    return $linkTarget[0]
   }
   return $Path
 }
