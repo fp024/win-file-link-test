@@ -10,27 +10,31 @@
 
 
 * 기존 코드
-```powershell
-$MAVEN_WRAPPER_DISTS = $null
-if ((Get-Item -Path $MAVEN_M2_PATH -Force).Target[0] -eq $null) {
-  $MAVEN_WRAPPER_DISTS = "$MAVEN_M2_PATH/wrapper/dists"
-} else {
-  $MAVEN_WRAPPER_DISTS = (Get-Item -Path $MAVEN_M2_PATH -Force).Target[0] + "/wrapper/dists"
-}
-```
+  ```powershell
+  $MAVEN_WRAPPER_DISTS = $null
+  if ((Get-Item -Path $MAVEN_M2_PATH -Force).Target[0] -eq $null) {
+    $MAVEN_WRAPPER_DISTS = "$MAVEN_M2_PATH/wrapper/dists"
+  } else {
+    $MAVEN_WRAPPER_DISTS = (Get-Item -Path $MAVEN_M2_PATH -Force).Target[0] + "/wrapper/dists"
+  }
+  ```	
 
 * 수정 코드
-```powershell
-$MAVEN_WRAPPER_DISTS = $null
-$m2PathItem = (Get-Item -Path $MAVEN_M2_PATH -Force).Target
-if ($m2PathItem -is [array] -and $m2PathItem.Count -gt 0) {
-  $MAVEN_WRAPPER_DISTS = $m2PathItem[0] + "/wrapper/dists"
-} else {
-  $MAVEN_WRAPPER_DISTS = "$MAVEN_M2_PATH/wrapper/dists"
-}
-```
+  ```powershell
+  $MAVEN_WRAPPER_DISTS = $null
+  $m2LinkTarget = (Get-Item -Path $MAVEN_M2_PATH -Force).Target
+  if ($m2LinkTarget -is [array] -and $m2LinkTarget.Count -gt 0) {
+    $MAVEN_WRAPPER_DISTS = "$($m2LinkTarget[0])/wrapper/dists"
+  } else {
+    $MAVEN_WRAPPER_DISTS = "$MAVEN_M2_PATH/wrapper/dists"
+  }
+  ```
+
+
 
 ## PR 제출
 
 * Fix null Target index error under strict mode for system profile path
   * https://github.com/apache/maven-wrapper/pull/405
+* 예제 프로젝트에서 변경 테스트
+  * https://github.com/fp024/spring-mvc-practice-study/blob/16f96fadf0c1e743cc304c94a0ee5a42f230aa6b/mvnw.cmd#L91-L97
