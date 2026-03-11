@@ -5,6 +5,8 @@ dictionaries: []
 words:
   - elif
   - mklink
+  - mvcpractice
   - systemprofile
+  - temurin
 ignoreWords: []
 import: []
