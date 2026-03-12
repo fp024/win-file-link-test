@@ -82,3 +82,21 @@ Thank you!
 
 #### References
 * https://github.com/fp024/win-file-link-test/blob/main/jenkins-test_en.md
+
+
+
+---
+
+**One more interesting finding:**
+
+Another definitive way to handle this in an x64 Jenkins environment is to explicitly invoke the 32-bit shell:
+
+```cmd
+C:\Windows\SysWOW64\cmd.exe /c mvnw clean package
+```
+
+
+
+---
+
+그냥 단순하게 cmd 자체를 x86용으로 실행되게 하면 쉽게 풀리는 걸 이제야 생각해냈다...😅😅
