@@ -29,7 +29,7 @@ Jenkins의 **Execute Windows batch command** 빌드 스텝에서 `C:\Windows\Sys
 ## 프로젝트 구성
 
 - **Java 17**
-- **JUnit Jupiter (JUnit 5)**
+- **JUnit Jupiter (JUnit 6)**
 - Maven Wrapper(`mvnw`) 사용
 
 

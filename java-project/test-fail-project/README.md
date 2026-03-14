@@ -28,7 +28,7 @@ This is a test project created to verify whether test failures are properly prop
 ## Project Configuration
 
 - **Java 17**
-- **JUnit Jupiter (JUnit 5)**
+- **JUnit Jupiter (JUnit 6)**
 - Uses Maven Wrapper (`mvnw`)
 
 
