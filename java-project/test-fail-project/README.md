@@ -1,5 +1,7 @@
 # test-fail-project
 
+[한국어](README_ko.md) | English
+
 ## Project Purpose
 
 This is a test project created to verify whether test failures are properly propagated to the overall Jenkins build status when running `mvnw clean test` using `C:\Windows\SysWOW64\cmd.exe /c` in Jenkins' **Execute Windows batch command** build step.
@@ -31,6 +33,6 @@ This is a test project created to verify whether test failures are properly prop
 
 
 
-## Verification Result (Failure propagation works well even when wrapped with `cmd /c` 😅)
+## Verification Result (Failure propagation works well even when wrapped with `cmd /c`. 😅)
 
 ![image-20260314181353260](doc-resources/image-20260314181353260.png)

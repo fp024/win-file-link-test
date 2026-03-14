@@ -1,5 +1,7 @@
 # test-fail-project
 
+한국어 | [English](README.md)
+
 ## 프로젝트 목적
 
 Jenkins의 **Execute Windows batch command** 빌드 스텝에서 `C:\Windows\SysWOW64\cmd.exe /c`를 사용해 `mvnw clean test`를 실행했을 때,
