@@ -12,7 +12,7 @@ Jenkins의 **Execute Windows batch command** 빌드 스텝에서 `C:\Windows\Sys
 - 빌드 스텝의 커맨드에 아래와 같이 입력합니다.
 
   ```bat
-  C:\Windows\SysWOW64\cmd.exe\cmd /c mvnw clean test
+  C:\Windows\SysWOW64\cmd.exe /c mvnw clean test
   ```
 
 - 프로젝트 내 테스트가 의도적으로 실패하도록 작성되어 있으며, 이때 Jenkins 빌드가 `FAILURE`로 처리되는지 여부를 검증합니다.
@@ -29,3 +29,9 @@ Jenkins의 **Execute Windows batch command** 빌드 스텝에서 `C:\Windows\Sys
 - **Java 17**
 - **JUnit Jupiter (JUnit 5)**
 - Maven Wrapper(`mvnw`) 사용
+
+
+
+## 확인결과 (`cmd /c`로 감싸더라도 실패 전파 잘됩니다. 😅)
+
+![image-20260314181353260](doc-resources/image-20260314181353260.png)
