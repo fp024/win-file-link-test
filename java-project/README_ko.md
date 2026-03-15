@@ -91,6 +91,32 @@ Finished: FAILURE
 
 ## Maven Wrapper 3.3.4의 mvnw.cmd 파일 수정 후의 테스트 Job 실행
 
+### mvnw.cmd 수정 내용
+
+* Maven Wrapper 3.3.4 원본 코드
+  * https://github.com/apache/maven-wrapper/blob/maven-wrapper-3.3.4/maven-wrapper-distribution/src/resources/only-mvnw.cmd#L91-L96
+
+  ```powershell
+  $MAVEN_WRAPPER_DISTS = $null
+  if ((Get-Item -Path $MAVEN_M2_PATH -Force).Target[0] -eq $null) {
+    $MAVEN_WRAPPER_DISTS = "$MAVEN_M2_PATH/wrapper/dists"
+  } else {
+    $MAVEN_WRAPPER_DISTS = (Get-Item -Path $MAVEN_M2_PATH -Force).Target[0] + "/wrapper/dists"
+  }
+  ```
+
+* 이 프로젝트에서 수정된 코드
+
+  ```powershell
+  $MAVEN_WRAPPER_DISTS = $null
+  $m2LinkTarget = (Get-Item -Path $MAVEN_M2_PATH -Force).Target
+  if ($m2LinkTarget -is [array] -and $m2LinkTarget.Count -gt 0) {
+    $MAVEN_WRAPPER_DISTS = "$($m2LinkTarget[0])/wrapper/dists"
+  } else {
+    $MAVEN_WRAPPER_DISTS = "$MAVEN_M2_PATH/wrapper/dists"
+  }
+  ```
+
 
 
 ### Job 생성
