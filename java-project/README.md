@@ -41,7 +41,7 @@ In that case, you can consider wrapping the command executed in Execute Windows 
 
 ### Job Creation
 
-Create a FreeStyle project, pull the test project from GitHub, and create a simple job that runs mvnw clean test.
+Create a FreeStyle project, pull the test project from GitHub, and create a simple job that runs `mvnw clean test`.
 
 * Git Configuration
 
@@ -95,7 +95,7 @@ Finished: FAILURE
 
 ### Job Creation
 
-Create a FreeStyle project, pull the test project from GitHub, and create a simple job that runs mvnw clean test.
+Create a FreeStyle project, pull the test project from GitHub, and create a simple job that runs `mvnw clean test`.
 
 * Git Configuration
 
@@ -165,7 +165,7 @@ Finished: SUCCESS
 
 ### Job Creation
 
-Create a FreeStyle project, pull the test project from GitHub, and create a simple job that runs mvnw clean test.
+Create a FreeStyle project, pull the test project from GitHub, and create a simple job that runs `mvnw clean test`.
 
 However, this project contains a JUnit test that intentionally fails.
 
