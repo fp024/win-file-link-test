@@ -192,12 +192,12 @@ Running as SYSTEM
 ...
 [test-fail-project build] $ cmd /c call C:\Windows\TEMP\jenkins15495466030859893950.bat
 
-C:\ProgramData\Jenkins\.jenkins\workspace\test-fail-project build&gt;SET TEST_PROJECT_ROOT=.\java-project\test-fail-project
+C:\ProgramData\Jenkins\.jenkins\workspace\test-fail-project build>SET TEST_PROJECT_ROOT=.\java-project\test-fail-project
 
-C:\ProgramData\Jenkins\.jenkins\workspace\test-fail-project build&gt;C:\Windows\SysWOW64\cmd.exe /c ".\java-project\test-fail-project\mvnw.cmd -f .\java-project\test-fail-project\pom.xml clean package"
+C:\ProgramData\Jenkins\.jenkins\workspace\test-fail-project build>C:\Windows\SysWOW64\cmd.exe /c ".\java-project\test-fail-project\mvnw.cmd -f .\java-project\test-fail-project\pom.xml clean package"
 [INFO] Scanning for projects...
 [INFO]
-[INFO] ----------------&lt; org.fp024.example:test-fail-project &gt;-----------------
+[INFO] ----------------< org.fp024.example:test-fail-project >-----------------
 [INFO] Building test-fail-project 1.0-SNAPSHOT
 [INFO]   from pom.xml
 [INFO] --------------------------------[ jar ]---------------------------------
@@ -208,9 +208,9 @@ C:\ProgramData\Jenkins\.jenkins\workspace\test-fail-project build&gt;C:\Windows\
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.fp024.example.AppTest
-[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.059 s &lt;&lt;&lt; FAILURE! -- in org.fp024.example.AppTest
-[ERROR] org.fp024.example.AppTest.shouldAnswerWithTrue -- Time elapsed: 0.037 s &lt;&lt;&lt; FAILURE!
-org.opentest4j.AssertionFailedError: expected: &lt;true&gt; but was: &lt;false&gt;
+[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.059 s <<< FAILURE! -- in org.fp024.example.AppTest
+[ERROR] org.fp024.example.AppTest.shouldAnswerWithTrue -- Time elapsed: 0.037 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:158)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:139)
 	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:69)
@@ -223,7 +223,7 @@ org.opentest4j.AssertionFailedError: expected: &lt;true&gt; but was: &lt;false&g
 [INFO] Results:
 [INFO]
 [ERROR] Failures:
-[ERROR]   AppTest.shouldAnswerWithTrue:12 expected: &lt;true&gt; but was: &lt;false&gt;
+[ERROR]   AppTest.shouldAnswerWithTrue:12 expected: <true> but was: <false>
 [INFO]
 [ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
 [INFO]
@@ -237,7 +237,7 @@ org.opentest4j.AssertionFailedError: expected: &lt;true&gt; but was: &lt;false&g
 [ERROR]
 [ERROR] See C:\ProgramData\Jenkins\.jenkins\workspace\test-fail-project build\java-project\test-fail-project\target\surefire-reports for the individual test results.
 [ERROR] See dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -&gt; [Help 1]
+[ERROR] -> [Help 1]
 [ERROR]
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
 [ERROR] Re-run Maven using the -X switch to enable full debug logging.
@@ -245,7 +245,7 @@ org.opentest4j.AssertionFailedError: expected: &lt;true&gt; but was: &lt;false&g
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
-C:\ProgramData\Jenkins\.jenkins\workspace\test-fail-project build&gt;exit 1
+C:\ProgramData\Jenkins\.jenkins\workspace\test-fail-project build>exit 1
 Build step 'Execute Windows batch command' marked build as failure
 Finished: FAILURE
 ```
