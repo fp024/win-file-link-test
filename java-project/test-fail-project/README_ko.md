@@ -9,6 +9,8 @@ Jenkins의 **Execute Windows batch command** 빌드 스텝에서 `C:\Windows\Sys
 
 ## 확인 시나리오
 
+- **✨ SYSTEM 계정으로 실행되는 Jenkins에서 Jenkins Freestyle Job을 설정합니다.**
+
 - Jenkins Freestyle 프로젝트의 **Execute Windows batch command** 스텝에서 사용하는 cmd.exe를 x86 환경의 아래 경로로 지정합니다.
 
 - 빌드 스텝의 커맨드에 아래와 같이 입력합니다.
@@ -28,7 +30,8 @@ Jenkins의 **Execute Windows batch command** 빌드 스텝에서 `C:\Windows\Sys
 
 ## 프로젝트 구성
 
-- **Java 17**
+- **✨ SYSTEM 계정으로 실행되는 Jenkins에서 Jenkins Freestyle Job을 설정합니다.**
+- **Java 17 - x86**
 - **JUnit Jupiter (JUnit 6)**
 - Maven Wrapper(`mvnw`) 사용
 

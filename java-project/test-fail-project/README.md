@@ -8,6 +8,8 @@ This is a test project created to verify whether test failures are properly prop
 
 ## Verification Scenario
 
+- **✨ Set up a Jenkins Freestyle Job in Jenkins running as SYSTEM account.**
+
 - Specify the cmd.exe used in the Jenkins Freestyle project's **Execute Windows batch command** step to the x86 environment path below.
 
 - Enter the following command in the build step:
@@ -27,7 +29,8 @@ This is a test project created to verify whether test failures are properly prop
 
 ## Project Configuration
 
-- **Java 17**
+- **✨ Set up a Jenkins Freestyle Job in Jenkins running as SYSTEM account.**
+- **Java 17 - x86**
 - **JUnit Jupiter (JUnit 6)**
 - Uses Maven Wrapper (`mvnw`)
 
