@@ -1,5 +1,7 @@
 # Jenkins에서 실제 동작 테스트
 
+[English](README.md) | 한국어
+
 >  Windows Server 2022 180일 평가판에 Jenkins 2.541.2를 설치해서 동작을 확인하였습니다.
 
 

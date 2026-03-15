@@ -1,5 +1,7 @@
 # Jenkins Real Environment Testing
 
+English | [한국어](README_ko.md)
+
 >  Tested on Windows Server 2022 180-day evaluation version with Jenkins 2.541.2 installed.
 
 
