@@ -92,7 +92,7 @@ Finished: FAILURE
 ## Testing Job Execution with Modified Maven Wrapper 3.3.4 mvnw.cmd
 
 
-### mvnw.cmd 수정 내용
+### mvnw.cmd  Changes
 
 * Maven Wrapper 3.3.4 Original code
   * https://github.com/apache/maven-wrapper/blob/maven-wrapper-3.3.4/maven-wrapper-distribution/src/resources/only-mvnw.cmd#L91-L96
