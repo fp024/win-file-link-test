@@ -279,3 +279,9 @@ Finished: FAILURE
 ```
 
 ✨ **프로젝트 내부의 빌드/테스트 실패가 바깥으로 잘 전파 됨을 확인**
+
+
+
+## 💡결론
+
+> Local 또는 도메인 계정이 아닌 LocalSystem(SYSTEM 계정)으로 실행되며 Jenkins 자체가 x64 Java 런타임으로 구동 중인 환경이라면, Job 내부에서 x86 JDK를 사용해 빌드해야 할 때 SysWOW64 경로의 "cmd /c"로 mvnw.cmd를 감싸서 실행함으로써 완전한 x86 실행 환경을 보장하는 것이 낫다고 생각합니다.

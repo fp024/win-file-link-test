@@ -278,3 +278,9 @@ Finished: FAILURE
 ```
 
 ✨ **Confirmed that build/test failures inside the project are properly propagated to the outer Jenkins build job**
+
+
+
+## 💡Conclusion
+
+> If Jenkins is running under the LocalSystem (SYSTEM account) rather than a Local or Domain user account, and Jenkins itself is running on an x64 Java runtime, I believe it is better to ensure a complete x86 execution environment when a Job needs to build using an x86 JDK by wrapping the execution of mvnw.cmd with "cmd /c" from the SysWOW64 directory.
